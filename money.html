@@ -1,0 +1,219 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link href="css/mui.min.css" rel="stylesheet" />
+	</head>
+
+	<body>
+		<script src="js/mui.min.js"></script>
+		<script type="text/javascript">
+			var str = '';
+
+			function up() {
+				setTimeout(function() {
+					str += '<div class="jiao" >'
+					str += '<p style="border-bottom: solid 1px #EEEEEE; ">1桥车汇-180125-006</p>'
+					str += '<div class="yu">'
+					str += '<div class="yu-o">'
+					str += '<p>14.00%</p>'
+					str += '<span>预期年化</span>'
+					str += '</div>'
+
+					str += '<div class="yu-t">'
+					str += '<p>理财期限:<span>6个月</span></p>'
+					str += '<p>剩余金额:<span>3450 元</span></p>'
+					str += '</div>'
+					str += '</div>'
+					str += '</div>'
+
+					mui(".mui-table-view")[0].innerHTML += str;
+					mui('#refreshContainer').pullRefresh().endPullupToRefresh();
+				}, 1000)
+			}
+
+			function dwon() {
+				str += '<div class="jiao" >'
+				str += '<p style="border-bottom: solid 1px #EEEEEE; ">桥车汇-180125-005</p>'
+				str += '<div class="yu">'
+				str += '<div class="yu-o">'
+				str += '<p>13.30%</p>'
+				str += '<span>预期年化</span>'
+				str += '</div>'
+				
+				str += '<div class="yu-t">'
+				str += '<p>理财期限:<span>9个月</span></p>'
+				str += '<p>剩余金额:<span>1236 元</span></p>'
+				str += '</div>'
+				str += '</div>'
+				str += '</div>'
+				setTimeout(function() {
+
+					mui(".mui-content")[0].innerHTML += str;
+					mui('#refreshContainer').pullRefresh().endPulldownToRefresh();
+				}, 1000)
+
+			}
+			mui.init({
+				pullRefresh: {
+					container: "#refreshContainer", //下拉刷新容器标识，querySelector能定位的css选择器均可，比如：id、.class等
+					down: {
+						contentdown: "下拉可以刷新", //可选，在下拉可刷新状态时，下拉刷新控件上显示的标题内容
+						contentover: "释放立即刷新", //可选，在释放可刷新状态时，下拉刷新控件上显示的标题内容
+						contentrefresh: "正在刷新...", //可选，正在刷新状态时，下拉刷新控件上显示的标题内容
+						callback: dwon //必选，刷新函数，根据具体业务来编写，比如通过ajax从服务器获取新数据；
+					},
+					up: {
+						height: 50, //可选.默认50.触发上拉加载拖动距离
+						auto: false, //可选,默认false.自动上拉加载一次
+						contentrefresh: "正在加载...", //可选，正在加载状态时，上拉加载控件上显示的标题内容
+						contentnomore: '没有更多数据了', //可选，请求完毕若没有更多数据时显示的提醒内容；
+						callback: up //必选，刷新函数，根据具体业务来编写，比如通过ajax从服务器获取新数据；
+					}
+				}
+			})
+			mui.plusReady(function() {
+				mui(".mui-table-view").on('tap',".jiao", function() {
+					var strTitle = this.getAttribute("title")
+					mui.openWindow({
+						url: "list.html",
+						id: "list,html",
+						extras: {
+							title: strTitle
+						}
+					})
+
+// alert(1111)
+				})
+			})
+
+		</script>
+		<style>
+			* {
+				margin: 0;
+				padding: 0;
+			}
+			
+			a {
+				color: #000000;
+			}
+			
+			img {
+				width: 100%;
+				height: 100px;
+			}
+			
+			.jiao {
+				width: 100%;
+				background: white;
+				margin-top: 10px;
+				border-radius: 5px;
+				border-bottom: solid 1px #EEEEEE;
+			}
+			
+			.jiao p {
+				font-size: 16px;
+				color: black;
+				padding: 10px;
+			}
+			
+			.yu {
+				display: flex;
+			}
+			
+			.yu-o {
+				flex: 1.2;
+				height: 100px;
+			}
+			
+			.yu-o p {
+				padding: 20px 0px 20px 20px;
+				color: #FA6641;
+				font-size: 32px;
+			}
+			
+			.yu-o span {
+				padding-left: 20px;
+				color: #D5D5D5;
+			}
+			
+			.yu-t {
+				flex: 1;
+			}
+			
+			.yu-t p {
+				padding: 20px 0px 10px 20px;
+				color: #D5D5D5;
+				font-size: 16px;
+			}
+			
+			.yu-t span {
+				margin-left: 5px;
+				color: black;
+			}
+		</style>
+		<header class="mui-bar mui-bar-nav" style="background: #238FF6;">
+			<h1 class="mui-title" style="color: #DAE9ED;">优选产品</h1>
+		</header>
+		<div id="refreshContainer" class="mui-content">
+			<div class="mui-table-view">
+				<div class="jiao" href="yin.html">
+					<p style="border-bottom: solid 1px #EEEEEE; ">
+						桥车汇-180125-001
+					</p>
+					<div class="yu">
+						<div class="yu-o">
+							<p>15.00%</p>
+							<span>预期年化</span>
+						</div>
+						<div class="yu-t">
+							<p>理财期限:<span>15个月</span></p>
+							<p>剩余金额:<span>3900 元</span></p>
+						</div>
+					</div>
+				</div>
+				<div class="jiao" href="yin.html">
+					<p style="border-bottom: solid 1px #EEEEEE; ">桥车汇-180125-003</p>
+					<div class="yu">
+						<div class="yu-o">
+							<p>13.20%</p>
+							<span>  预期年化</span>
+						</div>
+						<div class="yu-t">
+							<p>理财期限:<span>1个月</span></p>
+							<p>剩余金额:<span>5000 元</span></p>
+						</div>
+					</div>
+				</div>
+				<div class="jiao" href="yin.html">
+					<p style="border-bottom: solid 1px #EEEEEE; ">桥车汇-180125-004</p>
+					<div class="yu">
+						<div class="yu-o">
+							<p>14.40%</p>
+							<span>  预期年化</span>
+						</div>
+						<div class="yu-t">
+							<p>理财期限:<span>2个月</span></p>
+							<p>剩余金额:<span>25409 元</span></p>
+						</div>
+					</div>
+					<div class="jiao" href="yin.html">
+					<p style="border-bottom: solid 1px #EEEEEE; ">桥车汇-180125-004</p>
+					<div class="yu">
+						<div class="yu-o">
+							<p>14.40%</p>
+							<span>  预期年化</span>
+						</div>
+						<div class="yu-t">
+							<p>理财期限:<span>2个月</span></p>
+							<p>剩余金额:<span>25409 元</span></p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+</html>

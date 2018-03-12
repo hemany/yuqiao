@@ -1,0 +1,265 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link href="css/mui.min.css" rel="stylesheet" />
+	</head>
+	<script src="js/mui.min.js"></script>
+	<script type="text/javascript">
+		mui.init()
+	</script>
+	<style>
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		a{
+			color: #000000;
+		}
+			img {
+				width: 100%;
+				height: 100px;
+			}
+			.he-o {
+				display: flex;
+				background: white;
+				/*height: 211px;*/
+			}
+			
+			.he {
+				display: flex;
+				flex: 1;
+				border: solid 1px #F3F3F3;
+			}
+			
+			.hh {
+				display: 2;
+				text-align: center;
+				margin-top: 20px;
+				line-height: 30px;
+			}
+			
+			.hh h1 {
+				font-size: 16px;
+			}
+			.hh p{
+				margin-left: 10px;
+			}
+			.img {
+				flex: 2;
+			}
+			.img img{
+				
+				height: 83px;
+			}
+			.shuang{
+				border-radius: 50px;
+				text-align: center;
+				border: solid 2px #78B7D8;
+				height: 40px;
+				line-height: 40px;
+				margin: 15px 5px 15px 5px;
+				background: white;
+			}
+			.shuang p{
+				display: inline-block;
+				margin-left: 30px;
+				color: #959595;
+			}
+			.shuang p a{
+				color: #959595;
+			}
+			.shuang img{
+				width: 20px;
+				height: 20px;
+				margin-right: 10px;
+				margin-top: 5px;
+			}
+			.yin{
+				text-align: center;
+				background: white;
+				margin: 10px 5px 10px 5px;
+				/*padding-top: 20px;*/
+				border-radius: 5px;
+			}
+			.yin img{
+				width: 100%;
+				height: 100%;
+			}
+			.li{
+				margin: 10px 5px 10px 5px;
+			}
+			.jiao{
+				width: 100%;
+				background: white;
+				border-bottom: solid 2px #E5E5E5;
+			}
+			.jiao p{
+				padding: 20px 0px 20px 40px;
+				font-size: 20px;
+				color: black;
+				/*font-weight: bold;*/
+			}
+			.yu{
+				display: flex;
+			}
+			.yu-o{
+				flex: 1.2;
+				height:100px;
+				border-right: solid #EEEEEE 2px ;
+			}
+			.yu-o p{
+				padding: 20px 0px 20px 20px;
+				color: #FA6641;
+				font-size: 32px;
+			
+			}
+			.yu-o span{
+				padding-left: 20px;
+				color: #D5D5D5;
+			}
+			.yu-t{
+				flex: 1;
+				
+			}
+			.yu-t p{
+				padding: 20px 0px 10px 20px;
+				color: #D5D5D5;
+			    font-size: 16px;
+			}
+			.yu-t span{
+				margin-left: 5px;
+				color: black;
+			}
+		</style>
+	<body>
+		<!--lunbo-->
+		<div id="slider" class="mui-slider">
+
+			<div class="mui-slider-group mui-slider-loop">
+				<!-- 额外增加的一个节点(循环轮播：第一个节点是最后一张轮播) -->
+				<div class="mui-slider-item mui-slider-item-duplicate timg">
+					<a href="#">
+						<img src="img/timg.jpg">
+					</a>
+				</div>
+				<!-- 第一张 -->
+				<div class="mui-slider-item">
+					<a href="#">
+						<img src="img/timg1.jpg">
+					</a>
+				</div>
+				<!-- 第二张 -->
+				<div class="mui-slider-item">
+					<a href="#">
+						<img src="img/timg2.jpg">
+					</a>
+				</div>
+				<!-- 第三张 -->
+				<div class="mui-slider-item">
+					<a href="#">
+						<img src="img/timg3.jpg">
+					</a>
+				</div>
+				<!-- 第四张 -->
+				<div class="mui-slider-item">
+					<a href="#">
+						<img src="img/timg4.jpg">
+					</a>
+				</div>
+				<!-- 额外增加的一个节点(循环轮播：最后一个节点是第一张轮播) -->
+				<div class="mui-slider-item mui-slider-item-duplicate">
+					<a href="#">
+						<img src="img/timg.jpg">
+					</a>
+				</div>
+			</div>
+			<div class="mui-slider-indicator">
+				<div class="mui-indicator mui-active"></div>
+				<div class="mui-indicator"></div>
+				<div class="mui-indicator"></div>
+				<div class="mui-indicator"></div>
+			</div>
+		</div>
+		<!---->
+		<div class="mui-content he-o">
+			<div class="he">
+				<div class="hh">
+					<h1>安全保障</h1>
+					<p>多重保障 严格风控</p>
+				</div>
+				<div class="img"><img src="img/hh.jpg" alt="" /></div>
+
+			</div>
+			<div class="he">
+				<div class="hh">
+					<h1>活动中心</h1>
+					<p>新客好礼 多重惊喜</p>
+				</div>
+				<div class="img"><img src="img/hh3.jpg" alt="" /></div>
+			</div>
+		</div>
+		<div class="mui-content he-o">
+
+			<div class="he">
+				<div class="hh">
+					<h1>邀请有礼</h1>
+					<p>呼朋唤友 投资双赢</p>
+				</div>
+				<div class="img"><img src="img/hh2.jpg" alt="" /></div>
+
+			</div>
+			<div class="he">
+				<div class="hh">
+					<h1>续投有奖</h1>
+					<p>续投返现  金益求金</p>
+				</div>
+				<div class="img"><img src="img/hh4.jpg" alt="" /></div>
+			</div>
+		</div>
+		<!---->
+		<div class="shuang">
+			<sapn><img src="img/shuang.jpg"/><a href="#">双旦活动返现奖励发放通知</a></sapn>
+			<p><a href="#">更多》</a></p>
+		</div>
+		<div class="yin"> 
+		  <img src="img/banner.jpg" alt="" />
+			</div>
+			<div class="li">
+				精选理财
+			</div>
+			<div class="jiao">
+				<p>桥车汇-180125-001</p>
+				<div class="yu">
+					<div class="yu-o">
+						<p>15.00%</p>
+					  <span>  预期年化</span> 
+					</div>
+					<div class="yu-t">
+						<p>理财期限:<span>3个月</span></p>
+					   <p>剩余金额:<span>5000 元</span></p>
+					</div>
+					</div>
+				</div>	
+				<!---->
+				<div class="jiao">
+				<p>桥车汇-180125-001</p>
+				<div class="yu">
+					<div class="yu-o">
+						<p>13.20%</p>
+					  <span>  预期年化</span> 
+					</div>
+					<div class="yu-t">
+						<p>理财期限:<span>1个月</span></p>
+					   <p>剩余金额:<span>9450 元</span></p>
+					</div>
+					</div>
+				</div>	
+				
+			</div>
+	</body>
+
+</html>

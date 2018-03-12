@@ -1,0 +1,117 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link href="css/mui.min.css" rel="stylesheet" />
+	</head>
+<style type="text/css">
+		.mui-table-view{
+   		top:50px;
+   	}
+   
+			* {
+				margin: 0;
+				padding: 0;
+			}
+			
+			a {
+				color: #000000;
+			}
+			
+			img {
+				width: 100%;
+				height: 100px;
+			}
+			
+			.jiao {
+				width: 100%;
+				background: white;
+				margin-top: 10px;
+				border-radius: 5px;
+				border-bottom: solid 1px #EEEEEE;
+			}
+			
+			.jiao p {
+				font-size: 16px;
+				color: black;
+				padding: 10px;
+			}
+			
+			.yu {
+				display: flex;
+			}
+			
+			.yu-o {
+				flex: 1.2;
+				height: 100px;
+			}
+			
+			.yu-o p {
+				padding: 20px 0px 20px 20px;
+				color: #FA6641;
+				font-size: 32px;
+			}
+			
+			.yu-o span {
+				padding-left: 20px;
+				color: #D5D5D5;
+			}
+			
+			.yu-t {
+				flex: 1;
+			}
+			
+			.yu-t p {
+				padding: 20px 0px 10px 20px;
+				color: #D5D5D5;
+				font-size: 16px;
+			}
+			
+			.yu-t span {
+				margin-left: 5px;
+				color: black;
+			}
+		
+</style>
+	<body>
+		<header class="mui-bar mui-bar-nav" style="background: #238FF6;">
+		    <a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+		    <h1 class="mui-title">轿车汇</h1>
+		</header>=
+		<div class="mui-content">
+		    <div class="jiao" title="cbd">
+				<p style="border-bottom: solid 1px #EEEEEE; ">
+					桥车汇-180125-001
+				</p>
+				<div class="yu">
+					<div class="yu-o">
+						<p>15.00%</p>
+						<span>预期年化</span>
+					</div>
+					<div class="yu-t">
+						<p>理财期限:<span>15个月</span></p>
+						<p>剩余金额:<span>3900 元</span></p>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+		
+		<script src="js/mui.min.js"></script>
+		<script type="text/javascript">
+			mui.init()
+			mui.plusReady(function(){
+				
+				var cur = plus.webview.currentWebview();
+				//获取当前视口
+				
+				mui("#tt")[0].innerHTML = cur.title;
+//			
+			})
+		</script>
+	</body>
+
+</html>
